@@ -522,6 +522,8 @@ form {
     resize: none;
     height: 38px;
     padding: 10px;
+    border-radius: 0;
+    -webkit-appearance: none;
 }
 input:focus, textarea:focus, select:focus {
     outline: none;
