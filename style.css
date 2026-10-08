@@ -853,22 +853,22 @@ textarea {
         background-color: #45AA20;
         transition: transform 0.3s ease;
     }
-    .active {
+    .active-burg {
         background-color: #171717;
         top: -20px;
         padding: 25px;
     }
-    nav.active a {
+    nav.active-burg a {
         display: block;
         padding: 10px;
     }
-    nav.active .burg hr:first-child {
+    nav.active-burg .burg hr:first-child {
         top: 21px;
         transform: translateY(6px) rotate(45deg);
         position: absolute;
         right: 27px;
     }
-    nav.active .burg hr:last-child {
+    nav.active-burg .burg hr:last-child {
         transform: translateY(-6px) rotate(-45deg);
         position: absolute;
         top: 33px;
@@ -1095,12 +1095,6 @@ textarea {
     .main-text h1, h2 {
         font-size: 24px;
     }
-    .gallery-pic img {
-        width: 200px;
-    }
-    .gallery-pic {
-        height: 180px;
-    }
     .slider-next, .slider-prev {
         height: 4vh;
     }
@@ -1115,6 +1109,12 @@ textarea {
     form {
         width: 90%;
     }
+        .gallery-pic img {
+        width: 200px;
+    }
+    .gallery-pic {
+        height: 180px;
+    }
 }
 @media (max-width: 300px) {
     .button-intro {
@@ -1124,5 +1124,11 @@ textarea {
     #btn-right {
         width: fit-content;
         margin: 0 auto;
+    }
+    .gallery-pic img {
+        width: 150px;
+    }
+    .gallery-pic {
+        height: 140px;
     }
 }

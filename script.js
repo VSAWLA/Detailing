@@ -3,8 +3,8 @@ const burger = document.querySelector('.burg');
     const nav = document.querySelector('nav');
     const navLinks = document.querySelectorAll('nav a');
     burger.addEventListener('click', function () {
-        nav.classList.toggle('active');
-        const isOpen = nav.classList.contains('active');
+        nav.classList.toggle('active-burg');
+        const isOpen = nav.classList.contains('active-burg');
         burger.setAttribute('aria-expanded', isOpen);
         burger.setAttribute(
             'aria-label',
@@ -13,7 +13,7 @@ const burger = document.querySelector('.burg');
     });
     navLinks.forEach(function (link) {
         link.addEventListener('click', function () {
-            nav.classList.remove('active');
+            nav.classList.remove('active-burg');
             burger.setAttribute('aria-expanded', 'false');
             burger.setAttribute('aria-label', 'Открыть меню');
         });
