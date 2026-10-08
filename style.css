@@ -1,0 +1,1123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #171717;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    position: relative;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+    height: 90%;
+    padding: 50px 0 50px 0;
+}
+.hidden, .hid {
+    display: none;
+}
+@keyframes flicker {
+  50% {
+    text-shadow: 
+      0 0 3px #fff, 
+      0 0 6px #fff, 
+      0 0 15px #45AA20,
+      0 0 25px #45AA20
+    ;
+  }
+}
+                                                /* hero */
+#hero {
+    height: 100vh;
+    align-content: center;
+}
+#hero .wrapper {
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.burg, .about-pharagrapher-phone, .main-hr, .contact-p {
+    display: none;
+}
+nav {
+    text-transform: uppercase;
+    width: 40%;
+    justify-content: space-between;
+    display: flex;
+}
+nav a, #logo {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+}
+nav a {
+    transition: color 0.5s ease;
+}
+nav a:hover {
+    color: #45AA20;
+}
+#logo {
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #45AA20;
+}
+h1 {
+    font-weight: 700;
+    font-size: 64px;
+    color: #fff;
+    margin: 0;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+.accent-neon {
+    color: #45AA20;
+    text-shadow: 
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 5px #fff,
+    0 0 11px #45AA20,
+    0 0 20px #45AA20;
+}
+.accent {
+    color: #45AA20;
+}
+.follow {
+    border: 1px #45AA20 solid;
+    background-color: #171717;
+    color: #45AA20;
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-shadow: 
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 5px #fff,
+    0 0 11px #45AA20,
+    0 0 20px #45AA20;
+    animation: flicker 3s infinite alternate;
+    box-shadow: 
+    0 0 1px #ffffff,
+    0 0 2px #ffffff, 
+    0 0 6px #45AA20, 
+    0 0 12px #45AA20,
+    inset 0 0 1px #45AA20,
+    inset 0 0 2px #45AA20,
+    inset 0 0 6px #45AA20,
+    inset 0 0 12px #45AA20;
+}
+button:hover {
+    cursor: pointer;
+}
+main p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 200;
+    margin: 0;
+}
+.button-intro {
+    bottom: 0;
+    position: absolute;
+}
+#btn-left {
+    margin-right: 45px;
+}
+#btn-right {
+    border: 0;
+    border-bottom: 1px #fff solid;
+    background-color: #171717;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase;
+    padding-bottom: 11px;
+}
+#hero-car {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 80vh;
+}
+#btn-right img {
+    margin-left: 15px;
+}
+                                                /* about */
+.about-describe {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 93px;
+}
+h2 {
+    text-transform: uppercase;
+    color: #45AA20;
+    text-shadow: 
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 5px #fff,
+    0 0 11px #45AA20,
+    0 0 20px #45AA20;
+    font-weight: 800;
+    font-size: 48px;
+    margin: 0;
+}
+.about-pharagrapher {
+    color: #fff;
+    font-weight: 200;
+    font-size: 18px;
+    padding-right: 59px;
+    width: 467px;
+    margin: 0;
+}
+.about-list {
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 463px 467px;
+    grid-template-rows: 115px 93px;
+    justify-content: space-between;
+    gap: 38px;
+    margin: 0;
+}
+.about-item {
+    display: flex;
+}
+.number {
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    padding-right: 69px;
+}
+.about-list .about-item:nth-child(2) {
+    padding-right: 39px;
+}
+.about-list .number:nth-child(2) {
+    padding-right: 67px;
+}
+.about-content h3 {
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 27px;
+}
+.about-content p {
+    color: #fff;
+    font-weight: 200;
+    font-size: 18px;
+    margin: 0;
+}
+                                /* services */
+.services-describe {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+.services-pharagrapher {
+    width: 467px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+.services-list {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    border: 1px #45AA20 solid;
+    box-shadow: 
+    0 0 1px #ffffff,
+    0 0 2px #ffffff, 
+    0 0 6px #45AA20, 
+    0 0 12px #45AA20,
+    inset 0 0 1px #45AA20,
+    inset 0 0 2px #45AA20,
+    inset 0 0 6px #45AA20,
+    inset 0 0 12px #45AA20;
+    align-content: center;
+    width: 24%;
+    height: auto;
+    text-align: center;
+    padding: 50px 15px;
+}
+#services .number {
+    color: #45AA20;
+    font-size: 18px;
+    padding: 0;
+}
+h3 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+#services h3 {
+        height: 42px;
+}
+.card img {
+    padding: 30px 0;
+}
+.card p {
+    color: #fff;
+    font-weight: 200;
+    font-size: 18px;
+    padding-bottom: 30px;
+    width: 70%;
+    margin: 0 auto;
+    height: 93px;
+}
+.price {
+    color: #45AA20;
+    font-weight: 500;
+    font-size: 24px;
+}
+                                                /* gallery */
+#gallery .wrapper {
+    margin: 50px auto 50px auto;
+    padding: 0;
+}
+.gallery-describe {
+    display: flex;
+    justify-content: space-between;
+}
+.gallery-describe p {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    width: 467px;
+}
+.btn-slider {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+.gallery-pic {
+    height: 460px;
+}
+.slider {
+    padding-top: 60px;
+}
+.gallery-pic img {
+    width: 457px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+}
+.gallery-pic img.active {
+    opacity: 1;
+    z-index: 3;
+}
+.gallery-pic img.prev {
+    opacity: 0.6;
+    z-index: 2;
+    transform: translate(-140%);
+}
+.gallery-pic img.next {
+    opacity: 0.6;
+    z-index: 2;
+    transform: translate(40%);
+    right: 0;
+}
+.slider-prev:hover, .slider-next:hover {
+    cursor: pointer;
+}
+#current-number, #slash {
+    color: #45AA20;
+}
+.numb-slider {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.numb-slider span {
+    font-size: 16px;
+    font-weight: 200;
+    color: #fff;
+    padding: 0 5px;
+}
+                                                /* process */
+.process-describe {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+.process-pharagrapher {
+    width: 467px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+.process-list {
+    display: grid;
+    grid-template-columns: 1fr 467px;
+    grid-template-rows: 85px 85px;
+    justify-content: space-between;
+    gap: 50px;
+}
+.process-card {
+    display: flex;
+}
+.right-part-card {
+    padding-left: 35px;
+}
+
+.process-card .number {
+    padding-right: 35px;
+}
+.process-card p {
+    color: #fff;
+    font-weight: 200;
+    font-size: 16px;
+    margin: 0;
+}
+hr {
+    border-color: #45AA20;
+    height: 77px;
+    width: 1px;
+    margin: 0;
+}
+.process-card h3 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+                                                /* faq */
+#faq h2 {
+    padding-bottom: 50px;
+}
+.faq-wrapper-card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px;
+}
+.faq-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.faq-card {
+    border: 1px #45AA20 solid;
+    padding: 25px 30px;
+}
+.question {
+    display: flex;
+    justify-content: space-between;
+}
+.faq-card h3 {
+    color: #fff;
+    font-weight: 200;
+    font-size: 16px;
+}
+.open:hover, .close:hover {
+    cursor: pointer;
+}
+.answer {
+    display: none;
+    align-items: center;
+    padding-top: 20px;
+}
+.answer hr {
+    height: 1px;
+    width: 27px;
+    margin-right: 25px;
+}
+.answer p {
+    color: #fff;
+    font-weight: 200;
+    font-size: 16px;
+}
+                                                /* contact */
+.contact-main {
+    display: flex;
+    justify-content: space-between;
+}
+form {
+    margin-top: 50px;
+    height: 234px;
+    width: 467px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.form-name {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-left span {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+}
+.form-name input {
+    width: 250px;
+    background-color: #171717;
+    border: none;
+    border-bottom: 1px #45AA20 solid;
+    color: #fff;
+}
+.form-phone {
+    display: flex;
+    justify-content: space-between;
+}
+.form-phone input {
+    width: 250px;
+    background-color: #171717;
+    border: none;
+    border-bottom: 1px #45AA20 solid;
+    color: #fff;
+}
+.form-services {
+    display: flex;
+    justify-content: space-between;
+}
+.form-services select {
+    width: 250px;
+    background-color: #171717;
+    height: 38px;
+    padding: 10px;
+    border: 1px #45AA20 solid;
+    color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("img/arrow-contact-select.svg");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+.form-message {
+    display: flex;
+    justify-content: space-between;
+}
+.form-message textarea {
+    width: 250px;
+    background-color: #171717;
+    border: 1px #45AA20 solid;
+    color: #fff;
+    resize: none;
+    height: 38px;
+    padding: 10px;
+}
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: none;
+}
+.contact-right {
+    width: 467px;
+}
+.contact-right h3 {
+    padding-bottom: 30px;
+}
+.contact-right p {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 70px;
+}
+.contact-right button {
+    border: 1px #45AA20 solid;
+    color: #45AA20;
+    text-shadow: 
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 5px #fff,
+    0 0 11px #45AA20,
+    0 0 20px #45AA20;
+    animation: flicker 3s infinite alternate;
+    box-shadow: 
+    0 0 1px #ffffff,
+    0 0 2px #ffffff, 
+    0 0 6px #45AA20, 
+    0 0 12px #45AA20,
+    inset 0 0 1px #45AA20,
+    inset 0 0 2px #45AA20,
+    inset 0 0 6px #45AA20,
+    inset 0 0 12px #45AA20;
+    background-color: #171717;
+    color: #45AA20;
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+textarea {
+    resize: vertical;
+}
+.nova-detailing-part {
+    display: flex;
+    justify-content: space-between;
+}
+.nova-detailing-describe-block {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 300px;
+}
+.nova-detailing-main p {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 30px;
+}
+.nova-detailing-date {
+    color: #fff;
+    font-weight: 200;
+    font-size: 16px;
+}
+.nova-detailing-contacts {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: right;
+}
+.adress-card  span {
+    display: block;
+    padding-bottom: 10px;
+}
+.adress-card a {
+    color: #fff;
+    font-weight: 200;
+    font-size: 16px;
+    text-decoration: none;
+    font-style: normal;
+}
+.time-card  span {
+    display: block;
+    padding-bottom: 10px;
+}
+.time-card time {
+    color: #fff;
+    font-weight: 200;
+    font-size: 16px;
+}
+.phone-card span {
+    display: block;
+    padding-bottom: 10px;
+}
+.phone-card a {
+    color: #fff;
+    font-weight: 200;
+    font-size: 16px;
+    text-decoration: none;
+    font-style: normal;
+}
+.nova-detailing-contacts span {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@media (min-width: 1870px) {
+  .wrapper {
+    width: 1700px;
+  }
+}
+@media (max-width: 1671px) {
+    .card p {
+        height: 156px;
+    }
+}
+@media (max-width: 1439px) {
+    #hero-car {
+        object-fit: contain;
+    }
+    .main-text h1 {
+        padding-top: 4%;
+        padding-bottom: 3%;
+    }
+    .gallery-pic {
+        height: 351px;
+    }
+    .gallery-pic img {
+        width: 350px;
+    }
+}
+@media (max-width: 1200px) {
+    .wrapper {
+        width: 80%;
+    }
+    nav a, .contact-left span, #btn-right, .card p, .numb-slider span, .process-card p, .faq-card h3, .answer p{
+        font-size: 14px;
+    }
+    main p, h3, .price, .contact-right h3, .about-content h3, .about-content p, .number, .process-card h3, .about-pharagrapher, .services-pharagrapher, .gallery-describe p, .process-pharagrapher, .process-card .number {
+        font-size: 16px;
+    }
+    .hid {
+        display: block;
+        width: 100%;
+        opacity: 0.1;
+        height: 1px;
+        margin: 20px 0 50px 0;
+    }
+    .follow, .contact-right button {
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+    .services-pharagrapher, .gallery-describe p, .process-pharagrapher {
+        width: auto;
+        padding: 0;
+        text-align: right;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    #logo {
+        font-size: 24px;
+    }
+    #hero-car {
+        height: 70vh;
+    }
+    #btn-right img {
+        margin-left: 5px;
+    }
+    .main-text h1 {
+        font-size: 48px;
+    }
+    .about-describe {
+        margin: 0;
+    }
+    .about-describe p br {
+        display: none;
+    }
+    .about-pharagrapher {
+        width: 70%;
+        padding: 0;
+        text-align: right;
+    }
+    .about-list {
+        grid-template-rows: auto;
+        grid-template-columns: 40% 40%;
+    }
+    .services-list {
+        display: grid;
+        grid-template-columns: 320px 320px;
+        gap: 10%;
+    }
+    #services .wrapper {
+        height: 1016px;
+    }
+    .card {
+        width: auto;
+        padding: 30px 60px;
+    }
+    .gallery-pic img {
+        width: 250px;
+    }
+    .gallery-pic {
+        height: 250px;
+    }
+    .slider-prev, .slider-next {
+        height: 5vh;
+    }
+    .slider {
+        padding: 0;
+    }
+    .process-describe {
+        padding: 0;
+    }
+    .process-list {
+        grid-template-columns: 30% 30%;
+        grid-template-rows: auto;
+        row-gap: 30px;
+    }
+    .process-card hr {
+        height: auto;
+    }
+    .process-pharagrapher {
+        width: 45%;
+    }
+    .contact-right {
+        width: auto;
+        text-align: right;
+    }
+    .contact-right p {
+        font-size: 14px;
+        width: 200px;
+        padding-bottom: 30px;
+    }
+    .nova-detailing-describe-block {
+        height: 250px;
+    }
+}
+@media (max-width: 950px) {
+    .main-text h1 {
+        font-size: 36px;
+    }
+    #hero-car {
+        height: 60vh;
+        bottom: 5%;
+    }
+    nav {
+        width: 60%;
+    }
+    .about-item .number {
+        padding-right: 30px;
+    }
+    .services-list {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .card img {
+        padding: 15px 0;
+    }
+    .card p {
+        height: auto;
+        padding: 30px 0;
+    }
+    #services .wrapper {
+        height: auto;
+    }
+    .process-list {
+        grid-template-columns: 40% 40%;
+    }
+    form {
+        width: 300px;
+    }
+    .form-name input, .form-phone input, .form-services select, .form-message textarea {
+        width: 60%;
+    }
+    .form-services select, .form-message textarea {
+        height: 25px;
+    }
+    .form-services select {
+        background-image: url(img/arrow-contact-select-phone.svg);
+    }
+    .form-message textarea {
+        padding: 0 0 0 5px;
+        align-content: center;
+    }
+}
+@media (max-width: 800px) {
+    .pc, .about-pharagrapher {
+        display: none;
+    }
+    #hero-car {
+        display: none;
+    }
+    #hero {
+        background-image: url(img/intro-note.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .burg {
+        position: relative;
+        z-index: 3;
+        margin: 0 0 5px 0;
+        display: flex;
+        flex-direction: column;
+        height: 10px;
+        padding: 0;
+        background: transparent;
+        border: none;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav {
+        position: absolute;
+        flex-direction: column;
+        align-items: end;
+        gap: 15px;
+        padding: 0 25px 25px 25px;
+        z-index: 1;
+        width: auto;
+        right: 0;
+        text-align: right;
+        top: 0;
+        background-color: #171717;
+    }
+    nav a {
+        display: none;
+    }
+    .burg hr {
+        width: 25px;
+        height: 1px;
+        border: 1px solid #45AA20;
+        margin: 0;
+        transition: transform 0.3s ease;
+        position: absolute;
+        border: none;
+        background-color: #45AA20;
+    }
+    nav.active a {
+        display: block;
+        padding: 10px;
+    }
+    nav.active .burg hr:first-child {
+        transform: rotate(45deg);
+    }
+    nav.active .burg hr:last-child {
+        transform: rotate(-45deg);
+    }
+    .main-left {
+        text-align: center;
+    }
+    #btn-left {
+        margin: 0;
+    }
+    #btn-right {
+        background: transparent;
+    }
+    .button-intro {
+        bottom: 0;
+        display: flex;
+        gap: 40px;
+    }
+    .main-text h1 {
+        padding-top: 10%;
+        text-align: left;
+    }
+    .main-text p {
+        text-align: left;
+    }
+    .main-hr {
+        display: block;
+        width: 328px;
+        height: 1px;
+        margin: 20px 0;
+        opacity: 0.2;
+    }
+    .about-describe {
+        align-items: center;
+    }
+    .about-pharagrapher-phone {
+        display: block;
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        width: auto;
+        margin: 0;
+    }
+    .about-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .gallery-pic img.prev,.gallery-pic img.active, .gallery-pic img.next {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        margin: auto;
+        transform: translate(0);
+    }
+    .gallery-pic {
+        height: 220px;
+    }
+    .gallery-pic img.prev {
+        transform: translate(-40px, 10px);
+        opacity: 0.1;
+    }
+    .gallery-pic img.next {
+        transform: translate(40px, 10px);
+        opacity: 0.1;
+    }
+    .process-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    .right-part-card p br {
+        display: none;
+    }
+    .faq-wrapper-card {
+        display: block;
+    }
+    .faq-column:nth-child(1) {
+        margin-bottom: 20px;
+    }
+    .nova-detailing-describe-block {
+        height: 200px;
+    }
+    .nova-detailing-main p {
+        width: 200px;
+    }
+}   
+@media (max-width: 700px) {
+    .wrapper {
+        padding: 30px 0;
+    }
+    .contact-p {
+        display: block;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 200;
+        margin-top: 20px;
+    }
+    .contact-main{
+        display: block;
+    }
+    .contact-right h3, .contact-right p {
+        display: none;
+    }
+    .contact-right{
+        text-align: center;
+    }
+    .contact-left {
+        text-align: center;
+    }
+    form {
+        margin: 60px auto 30px auto;
+    }
+    .nova-detailing-part {
+        display: block;
+    }
+    .nova-detailing-describe-block {
+        height: auto; 
+    }
+    .nova-detailing-main {
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+        padding-bottom: 20px;
+        gap: 40px;
+    }
+    .nova-detailing-contacts {
+        text-align: left;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .nova-detailing-part h2 {
+        text-align: left;
+    }
+    .adress-card, .time-card, .phone-card {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .nova-detailing-contacts span {
+        padding: 0;
+     }
+    .nova-detailing-main p {
+        padding: 0;
+    }
+    .nova-detailing-date {
+        display: none;
+    }
+}   
+@media (max-width: 600px) {
+    .main-hr {
+        width: 100%;
+    }
+    .button-intro {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #faq h2 {
+        text-align: center;
+    }
+}
+@media (max-width: 500px) {
+    #hero {
+        background-image: url(img/intro-phone.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .card {
+        padding: 30px 20px;
+        width: 80%;
+        align-self: center;
+    }
+    .gallery-pic img.next, .gallery-pic img.prev {
+        transform: translate(0);
+    }    
+    .process-pharagrapher {
+        width: 40%;
+    }
+    .nova-detailing-main {
+        display: block;
+        text-align: center;
+    }
+    .nova-detailing-main h2 {
+        text-align: center;
+    }
+    .nova-detailing-main p {
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    .wrapper {
+        width: 90%;
+    }
+    nav a, .contact-left span, #btn-right, .card p, .numb-slider span, .process-card p, .faq-card h3, .answer p{
+        font-size: 12px;
+    }
+    .adress-card span, .adress-card a, .nova-detailing-contacts span, .time-card time, .nova-detailing-contacts span, .phone-card a, .main p, h3, .price, .contact-right h3, .about-content h3, .about-content p, .number, .process-card h3, .about-pharagrapher, .services-pharagrapher, .gallery-describe p, .process-pharagrapher, .process-card .number {
+        font-size: 14px;
+    }
+    #logo {
+        font-size: 16px;
+    }
+    .open {
+        padding-left: 10px;
+        width: 25px;
+    }
+    .faq-card {
+        padding: 15px 20px;
+    }
+}
+@media (max-width: 450px) {
+    #btn-left, .contact-right button {
+        text-shadow: none;
+        animation: none;
+    }
+    .main-text h1, h2 {
+        font-size: 24px;
+    }
+    .gallery-pic img {
+        width: 200px;
+    }
+    .gallery-pic {
+        height: 180px;
+    }
+    .slider-next, .slider-prev {
+        height: 2vh;
+    }
+}
+@media (max-width: 390px) {
+    .button-intro {
+        gap: 10px;
+    }
+    .follow {
+        font-size: 12px;
+    }
+    form {
+        width: 90%;
+    }
+}
+@media (max-width: 300px) {
+    .button-intro {
+        flex-direction: column;
+        gap: 20px;
+    }
+    #btn-right {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
