@@ -468,6 +468,10 @@ form {
     font-weight: 200;
 }
 .form-name input {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border-radius: 0;
     width: 250px;
     background-color: #171717;
     border: none;
@@ -484,6 +488,10 @@ form {
     border: none;
     border-bottom: 1px #45AA20 solid;
     color: #fff;
+    background: transparent;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
 }
 .form-services {
     display: flex;
