@@ -210,7 +210,7 @@
                                 </div>
                                 <div class="answer">
                                     <hr>
-                                    <p>Время зависит от выбранной услуги и состояния автомобиля. Обычно процедура занимает от нескольких часов до одного рабочего дня.</p>
+                                    <p>Обычно процедура занимает от нескольких часов до одного рабочего дня.</p>
                                 </div>
                     </div>
                     <div class="faq-card">
@@ -282,7 +282,7 @@
                 <div class="contact-left">
                     <h2>Обратная связь</h2>
                     <p class="contact-p">Появились вопросы?<br>Мы свяжемся с Вами!</p>
-                    <form>
+                    <form id="form">
                         <div class="form-name">
                             <span>Имя</span>
                             <input type="text" id="input-name" name="user_name" class="validatable" required autocomplete="given-name">
@@ -312,7 +312,10 @@
                 <div class="contact-right">
                     <h3>Запишитесь на детейлинг</h3>
                     <p>Оставьте контакты - мы свяжемся с Вами<br> и подберём подходящую услугу</p>
-                    <button id="feedback" type="submit">Оставить заявку</button>
+                    <div class="btn-feedback">
+                        <button id="feedback" type="submit">Оставить заявку</button>
+                        <span class="wrong">Заполните выделенные поля</span>
+                    </div>
                 </div>
             </div>
         </div>

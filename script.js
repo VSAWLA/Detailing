@@ -132,6 +132,24 @@ inputName.addEventListener("input", function() {
 });
 
 
+const inp = [
+        inputName,
+        phone,
+        document.querySelector("#service")
+];
+const form = document.querySelector('#form');
+const wrong = document.querySelector(".wrong");
+feedback.addEventListener('click', function() {
+    const Filled = inp.every(input => input.value.trim() !== "");
+    if (Filled) {
+        alert('Форма успешно отправлена, мы с Вами свяжемся!');
+        wrong.style.display = "none"
+        form.reset(); 
+    } else {
+        wrong.style.display = "block"
+    }
+});
+
 const contact = document.querySelector("#contact");
 const follow = document.querySelectorAll(".follow");
 
@@ -153,3 +171,4 @@ btnGallery.addEventListener('click', function() {
     block: 'start'
   });
 });
+

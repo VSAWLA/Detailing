@@ -555,6 +555,17 @@ input:focus, textarea:focus, select:focus {
     text-transform: uppercase;
     padding: 10px 20px;
 }
+.btn-feedback {
+    width: fit-content;
+    text-align: center;
+}
+.contact-right span {
+    display: none;
+    font-weight: 200;
+    font-size: 14px;
+    padding-top: 20px;
+    color: red;
+}
 textarea {
     resize: vertical;
 }
@@ -750,6 +761,9 @@ textarea {
         font-size: 14px;
         width: 200px;
         padding-bottom: 30px;
+    }
+    .btn-feedback {
+        text-align: right;
     }
     .nova-detailing-describe-block {
         height: 250px;
@@ -983,6 +997,13 @@ textarea {
     }
     form {
         margin: 60px auto 30px auto;
+    }
+    .btn-feedback {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .contact-right span {
+        font-size: 12px;
     }
     .nova-detailing-part {
         display: block;
