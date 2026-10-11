@@ -1,33 +1,35 @@
+const cursorGlow = document.querySelector('.cursor-glow');
+
+document.addEventListener('mousemove', function(event) {
+    cursorGlow.style.left = event.clientX + 'px';
+    cursorGlow.style.top = event.clientY + 'px';
+});
 /*hero*/
 const burger = document.querySelector('.burg');
-    const nav = document.querySelector('nav');
-    const navLinks = document.querySelectorAll('nav a');
-    burger.addEventListener('click', function () {
-        nav.classList.toggle('active-burg');
-        const isOpen = nav.classList.contains('active-burg');
-        burger.setAttribute('aria-expanded', isOpen);
-        burger.setAttribute(
-            'aria-label',
-            isOpen ? 'Закрыть меню' : 'Открыть меню'
-        );
+const nav = document.querySelector('nav');
+const navLinks = document.querySelectorAll('nav a');
+
+burger.addEventListener('click', function () {
+    nav.classList.toggle('active-burg');
+    const isOpen = nav.classList.contains('active-burg');
+    burger.setAttribute('aria-expanded', isOpen);
+    burger.setAttribute(
+        'aria-label',
+        isOpen ? 'Закрыть меню' : 'Открыть меню'
+    );
+});
+navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+        nav.classList.remove('active-burg');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Открыть меню');
     });
-    navLinks.forEach(function (link) {
-        link.addEventListener('click', function () {
-            nav.classList.remove('active-burg');
-            burger.setAttribute('aria-expanded', 'false');
-            burger.setAttribute('aria-label', 'Открыть меню');
-        });
-    });
-/*about*/
-/*services*/
+});
 /*gallery*/
 const prev = document.querySelector('.slider-prev');
 const next = document.querySelector('.slider-next');
-
 const slides = document.querySelectorAll('.gallery-pic img');
-
 const number = document.querySelector('#current-number');
-
 let currentSlide = 0;
 
 function updateSlider() {
@@ -80,30 +82,55 @@ prev.addEventListener('click', function() {
 
     updateSlider();
 });
-
-/*process*/
 /*faq*/
-
-/*contact*/
-const phone = document.querySelector("#phone");
-
-phone.addEventListener("input", function() {
-    phone.value = phone.value.replace(/\D/g, "");
-});
-
 const answers = document.querySelectorAll(".answer");
 const questions = document.querySelectorAll(".question");
 
 questions.forEach(function(question, index) {
     question.addEventListener("click", function() {
         const answer = answers[index];
-        if (answer.style.display === "none") {
+
+        if (getComputedStyle(answer).display === "none") {
             answer.style.display = "flex";
         } else {
             answer.style.display = "none";
         }
     });
 });
+/*contact*/
+const feedback = document.getElementById('feedback');
+const inputs = document.querySelectorAll('.validatable');
+
+feedback.addEventListener('click', () => {
+  inputs.forEach(input => {
+    if (input.value.trim() === '') {
+      input.classList.add('input-error');
+    } else {
+      input.classList.remove('input-error');
+    }
+  });
+});
+
+inputs.forEach(input => {
+  input.addEventListener('input', () => {
+    if (input.value.trim() !== '') {
+      input.classList.remove('input-error');
+    }
+  });
+});
+
+const phone = document.querySelector("#phone");
+
+phone.addEventListener("input", function() {
+    phone.value = phone.value.replace(/\D/g, "");
+});
+
+const inputName = document.querySelector("#input-name");
+
+inputName.addEventListener("input", function() {
+    inputName.value = inputName.value.replace(/[0-9]/g, '');
+});
+
 
 const contact = document.querySelector("#contact");
 const follow = document.querySelectorAll(".follow");

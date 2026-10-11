@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NOVA Detailing</title>
 </head>
+<div class="cursor-glow"></div>
 <body>
     <section id="hero">
         <div class="wrapper">
@@ -18,8 +19,8 @@
                     </button>
                     <a href="#about">о нас</a>
                     <a href="#services">услуги</a>
-                    <a href="#gallery">галерея</a>
-                    <a href="#faq">faq</a>
+                    <a href="#gallery">Работы</a>
+                    <a href="#faq">Вопросы</a>
                     <a href="#contact">контакты</a>
                 </nav>
 
@@ -49,9 +50,9 @@
     <section id="about">
         <div class="wrapper">
             <div class="about-describe">
-                <h2>about</h2>
+                <h2>О нас</h2>
                 <p class="about-pharagrapher">Мы не просто очищаем автомобиль.<br> Мы восстанавливаем его внешний вид, <br>защищаем поверхности и уделяем внимание<br> деталям, которые обычно остаются <br>незаметными.</p>
-                <p class="about-pharagrapher-phone">О нас</p>
+                <p class="about-pharagrapher-phone">Опыт, проверенный временем</p>
             </div>
             <hr class="hid">
             <ul class="about-list">
@@ -84,8 +85,8 @@
 
         <div class="wrapper">
             <div class="services-describe">
-                <h2>services</h2>
-                <p class="services-pharagrapher">Услуги</p>
+                <h2>Услуги</h2>
+                <p class="services-pharagrapher">Понятные условия, фиксированные цены</p>
             </div>
             <div class="services-list">
                 <div class="card">
@@ -121,8 +122,8 @@
 
         <div class="wrapper">
             <div class="gallery-describe">
-                <h2>Gallery</h2>
-                <p>Работы</p>
+                <h2>Работы</h2>
+                <p>Реализованные идеи, <br>которыми мы гордимся</p>
             </div>
             <hr class="hid">
                 <div class="slider">
@@ -152,8 +153,8 @@
 
         <div class="wrapper">
             <div class="process-describe">
-                <h2>process</h2>
-                <p class="process-pharagrapher">Как проходит работа</p>
+                <h2>Как проходит работа</h2>
+                <p class="process-pharagrapher">Качество - наша главная цель</p>
             </div>
             <hr class="hid">
             <div class="process-list">
@@ -197,7 +198,7 @@
 
     <section id="faq">
         <div class="wrapper">
-            <h2>faq</h2>
+            <h2>Вопросы</h2>
             <div class="faq-wrapper-card">
                 <div class="faq-column">
 
@@ -279,20 +280,20 @@
         <div class="wrapper">
             <div class="contact-main">
                 <div class="contact-left">
-                    <h2>FeedBack</h2>
+                    <h2>Обратная связь</h2>
                     <p class="contact-p">Появились вопросы?<br>Мы свяжемся с Вами!</p>
                     <form>
                         <div class="form-name">
                             <span>Имя</span>
-                            <input type="text" name="user_name" required autocomplete="given-name">
+                            <input type="text" id="input-name" name="user_name" class="validatable" required autocomplete="given-name">
                         </div>
                         <div class="form-phone">
                             <span>Телефон</span>
-                            <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="numeric" pattern="[0-9]" maxlength="11">
+                            <input type="tel" id="phone" name="phone"  class="validatable" required autocomplete="tel" inputmode="numeric" pattern="[0-9]" maxlength="11">
                         </div>
                         <div class="form-services">
                             <span>Услуга</span>
-                            <select name="service" id="service" required>
+                            <select name="service" id="service"  class="validatable" required>
                                 <option value="" selected disabled></option>
                                 <option value="ceramics">Керамика</option>
                                 <option value="dry_cleaning">Химчистка</option>
@@ -303,15 +304,15 @@
                             </select>
                         </div>
                         <div class="form-message">
-                            <span>Сообщение</span>
-                            <textarea name="message" id="message" required cols="25" ></textarea>
+                            <span>Сообщение*</span>
+                            <textarea name="message" id="message" cols="25" ></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="contact-right">
                     <h3>Запишитесь на детейлинг</h3>
                     <p>Оставьте контакты - мы свяжемся с Вами<br> и подберём подходящую услугу</p>
-                    <button type="submit">Оставить заявку</button>
+                    <button id="feedback" type="submit">Оставить заявку</button>
                 </div>
             </div>
         </div>

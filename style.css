@@ -23,15 +23,18 @@ h1, h2, h3, p {
 .hidden, .hid {
     display: none;
 }
-@keyframes flicker {
-  50% {
-    text-shadow: 
-      0 0 3px #fff, 
-      0 0 6px #fff, 
-      0 0 15px #45AA20,
-      0 0 25px #45AA20
-    ;
-  }
+.cursor-glow {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    background: transparent;
+    box-shadow: 
+        0 0 30px 5px #fff,
+        0 0 60px 15px #45AA20;
+    transform: translate(-50%, -50%);
 }
                                                 /* hero */
 #hero {
@@ -83,39 +86,27 @@ h1 {
 .accent-neon {
     color: #45AA20;
     text-shadow: 
-    0 0 1px #fff,
     0 0 2px #fff,
-    0 0 5px #fff,
-    0 0 11px #45AA20,
-    0 0 20px #45AA20;
+    0 0 15px #45AA20;
 }
 .accent {
     color: #45AA20;
 }
 .follow {
-    border: 1px #45AA20 solid;
+    border: 1px #a6df92 solid;
+    color: #45AA20 ;
+    text-shadow: 
+    0 0 5px #45AA20;
+    box-shadow:  
+    0 0 5px #45AA20,
+    0 0 10px #45AA20,
+    0 0 20px #45AA20,
+    inset 0 0 5px #45AA20;
     background-color: #171717;
-    color: #45AA20;
     font-size: 16px;
     font-weight: 200;
     text-transform: uppercase;
     padding: 10px 20px;
-    text-shadow: 
-    0 0 1px #fff,
-    0 0 2px #fff,
-    0 0 5px #fff,
-    0 0 11px #45AA20,
-    0 0 20px #45AA20;
-    animation: flicker 3s infinite alternate;
-    box-shadow: 
-    0 0 1px #ffffff,
-    0 0 2px #ffffff, 
-    0 0 6px #45AA20, 
-    0 0 12px #45AA20,
-    inset 0 0 1px #45AA20,
-    inset 0 0 2px #45AA20,
-    inset 0 0 6px #45AA20,
-    inset 0 0 12px #45AA20;
 }
 button:hover {
     cursor: pointer;
@@ -162,11 +153,8 @@ h2 {
     text-transform: uppercase;
     color: #45AA20;
     text-shadow: 
-    0 0 1px #fff,
     0 0 2px #fff,
-    0 0 5px #fff,
-    0 0 11px #45AA20,
-    0 0 20px #45AA20;
+    0 0 15px #45AA20;
     font-weight: 800;
     font-size: 48px;
     margin: 0;
@@ -234,16 +222,13 @@ h2 {
     justify-content: space-between;
 }
 .card {
-    border: 1px #45AA20 solid;
-    box-shadow: 
-    0 0 1px #ffffff,
-    0 0 2px #ffffff, 
-    0 0 6px #45AA20, 
-    0 0 12px #45AA20,
-    inset 0 0 1px #45AA20,
-    inset 0 0 2px #45AA20,
-    inset 0 0 6px #45AA20,
-    inset 0 0 12px #45AA20;
+    border: 1px #a6df92 solid;
+    color: #45AA20 ;
+    box-shadow:  
+    0 0 5px #45AA20,
+    0 0 10px #45AA20,
+    0 0 20px #45AA20,
+    inset 0 0 5px #45AA20;
     align-content: center;
     width: 24%;
     height: auto;
@@ -261,7 +246,7 @@ h3 {
     font-size: 18px;
 }
 #services h3 {
-        height: 42px;
+    height: 42px;
 }
 .card img {
     padding: 30px 0;
@@ -446,6 +431,12 @@ hr {
     font-size: 16px;
 }
                                                 /* contact */
+form input.input-error, form select.input-error {
+    border: 2px solid red;
+}
+form select.input-error {
+    background-image: url(img/check-red.svg);
+}
 .contact-main {
     display: flex;
     justify-content: space-between;
@@ -474,8 +465,12 @@ form {
     border-radius: 0;
     width: 250px;
     background-color: #171717;
-    border: none;
-    border-bottom: 1px #45AA20 solid;
+    resize: none;
+    height: 38px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #45AA20;
+    padding: 10px;
     color: #fff;
 }
 .form-phone {
@@ -483,15 +478,19 @@ form {
     justify-content: space-between;
 }
 .form-phone input {
-    width: 250px;
-    background-color: #171717;
-    border: none;
-    border-bottom: 1px #45AA20 solid;
-    color: #fff;
-    background: transparent;
-    border-radius: 0;
     appearance: none;
     -webkit-appearance: none;
+    background: transparent;
+    border-radius: 0;
+    width: 250px;
+    background-color: #171717;
+    resize: none;
+    height: 38px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #45AA20;
+    padding: 10px;
+    color: #fff;
 }
 .form-services {
     display: flex;
@@ -506,7 +505,7 @@ form {
     color: #fff;
     appearance: none;
     -webkit-appearance: none;
-    background-image: url("img/arrow-contact-select.svg");
+    background-image: url(img/arrow-contact-select.svg);
     background-repeat: no-repeat;
     background-position: right 15px center;
 }
@@ -523,7 +522,6 @@ form {
     height: 38px;
     padding: 10px;
     border-radius: 0;
-    -webkit-appearance: none;
 }
 input:focus, textarea:focus, select:focus {
     outline: none;
@@ -542,26 +540,16 @@ input:focus, textarea:focus, select:focus {
     padding-bottom: 70px;
 }
 .contact-right button {
-    border: 1px #45AA20 solid;
-    color: #45AA20;
+    border: 1px #a6df92 solid;
+    color: #45AA20 ;
     text-shadow: 
-    0 0 1px #fff,
-    0 0 2px #fff,
-    0 0 5px #fff,
-    0 0 11px #45AA20,
-    0 0 20px #45AA20;
-    animation: flicker 3s infinite alternate;
-    box-shadow: 
-    0 0 1px #ffffff,
-    0 0 2px #ffffff, 
-    0 0 6px #45AA20, 
-    0 0 12px #45AA20,
-    inset 0 0 1px #45AA20,
-    inset 0 0 2px #45AA20,
-    inset 0 0 6px #45AA20,
-    inset 0 0 12px #45AA20;
+    0 0 5px #45AA20;
+    box-shadow:  
+    0 0 5px #45AA20,
+    0 0 10px #45AA20,
+    0 0 20px #45AA20,
+    inset 0 0 5px #45AA20;
     background-color: #171717;
-    color: #45AA20;
     font-size: 16px;
     font-weight: 200;
     text-transform: uppercase;
@@ -634,6 +622,7 @@ textarea {
     font-size: 16px;
 }
 
+
 @media (min-width: 1870px) {
   .wrapper {
     width: 1700px;
@@ -666,7 +655,7 @@ textarea {
     nav a, .contact-left span, #btn-right, .card p, .numb-slider span, .process-card p, .faq-card h3, .answer p{
         font-size: 14px;
     }
-    main p, h3, .price, .contact-right h3, .about-content h3, .about-content p, .number, .process-card h3, .about-pharagrapher, .services-pharagrapher, .gallery-describe p, .process-pharagrapher, .process-card .number {
+    .about-pharagrapher, .about-pharagrapher-phone, main p, h3, .price, .contact-right h3, .about-content h3, .about-content p, .number, .process-card h3, .about-pharagrapher, .services-pharagrapher, .gallery-describe p, .process-pharagrapher, .process-card .number {
         font-size: 16px;
     }
     .hid {
@@ -807,9 +796,6 @@ textarea {
     }
     .form-services select, .form-message textarea {
         height: 25px;
-    }
-    .form-services select {
-        background-image: url(img/arrow-contact-select-phone.svg);
     }
     .form-message textarea {
         padding: 0 0 0 5px;
@@ -973,6 +959,9 @@ textarea {
     .wrapper {
         padding: 30px 0;
     }
+    .services-pharagrapher, .about-pharagrapher-phone {
+        width: 50%;
+    }
     .contact-p {
         display: block;
         color: #fff;
@@ -1083,7 +1072,7 @@ textarea {
     nav a, .contact-left span, #btn-right, .card p, .numb-slider span, .process-card p, .faq-card h3, .answer p{
         font-size: 12px;
     }
-    .adress-card span, .adress-card a, .nova-detailing-contacts span, .time-card time, .nova-detailing-contacts span, .phone-card a, .main p, h3, .price, .contact-right h3, .about-content h3, .about-content p, .number, .process-card h3, .about-pharagrapher, .services-pharagrapher, .gallery-describe p, .process-pharagrapher, .process-card .number {
+    .about-pharagrapher-phone, .adress-card span, .adress-card a, .nova-detailing-contacts span, .time-card time, .nova-detailing-contacts span, .phone-card a, .main p, h3, .price, .contact-right h3, .about-content h3, .about-content p, .number, .process-card h3, .about-pharagrapher, .services-pharagrapher, .gallery-describe p, .process-pharagrapher, .process-card .number {
         font-size: 14px;
     }
     #logo {
@@ -1100,7 +1089,7 @@ textarea {
 @media (max-width: 450px) {
     #btn-left, .contact-right button {
         text-shadow: none;
-        animation: none;
+
     }
     .main-text h1, h2 {
         font-size: 24px;
@@ -1140,5 +1129,23 @@ textarea {
     }
     .gallery-pic {
         height: 140px;
+    }
+}
+@media (max-height: 430px) {
+    .button-intro {
+        position: static;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 300px) {
+    .about-describe, .services-describe, .gallery-describe, .process-describe {
+        display: block;
+    }
+    #services h2, #gallery h2, #process h2 { 
+        padding-bottom: 10px;
+    }
+        .about-pharagrapher, .services-pharagrapher, .process-pharagrapher, .gallery-describe p {
+        text-align: left;
+        width: 100%;
     }
 }
