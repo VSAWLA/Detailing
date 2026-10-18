@@ -36,6 +36,13 @@ h1, h2, h3, p {
         0 0 60px 15px #45AA20;
     transform: translate(-50%, -50%);
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #171717 inset !important; /* Вместо white укажите цвет вашего фона */
+    -webkit-text-fill-color: #fff !important;
+}
                                                 /* hero */
 #hero {
     height: 100vh;
@@ -139,6 +146,7 @@ main p {
     right: 0;
     bottom: 0;
     height: 80vh;
+    z-index: -1;
 }
 #btn-right img {
     margin-left: 15px;
@@ -429,6 +437,7 @@ hr {
     color: #fff;
     font-weight: 200;
     font-size: 16px;
+    width: 80%;
 }
                                                 /* contact */
 form input.input-error, form select.input-error {
@@ -636,7 +645,7 @@ textarea {
 
 @media (min-width: 1870px) {
   .wrapper {
-    width: 1700px;
+    width: 1600px;
   }
 }
 @media (max-width: 1671px) {
@@ -748,7 +757,7 @@ textarea {
         row-gap: 30px;
     }
     .process-card hr {
-        height: auto;
+        height: 140px;
     }
     .process-pharagrapher {
         width: 45%;
@@ -769,6 +778,14 @@ textarea {
         height: 250px;
     }
 }
+
+
+@media (max-width: 1000px) {
+    .process-card hr {
+        height: 140px;
+    }
+}
+
 @media (max-width: 950px) {
     .main-text h1 {
         font-size: 36px;
@@ -808,15 +825,16 @@ textarea {
     .form-name input, .form-phone input, .form-services select, .form-message textarea {
         width: 60%;
     }
-    .form-services select, .form-message textarea {
-        height: 25px;
-    }
+
     .form-message textarea {
         padding: 0 0 0 5px;
         align-content: center;
     }
 }
 @media (max-width: 800px) {
+    .cursor-glow {
+    display: none;
+    }
     .pc, .about-pharagrapher {
         display: none;
     }
@@ -952,6 +970,9 @@ textarea {
         flex-direction: column;
         justify-content: space-between;
         gap: 40px;
+    }
+    .process-card hr {
+        height: 100px;
     }
     .right-part-card p br {
         display: none;
@@ -1168,5 +1189,8 @@ textarea {
         .about-pharagrapher, .services-pharagrapher, .process-pharagrapher, .gallery-describe p {
         text-align: left;
         width: 100%;
+    }
+    .process-card hr {
+        height: 130px;
     }
 }
