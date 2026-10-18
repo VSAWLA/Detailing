@@ -839,6 +839,10 @@ textarea {
     .cursor-glow {
     display: none;
     }
+    #btn-left:hover, #btn-right:hover, .follow:hover, #feedback:hover {
+    transition: none;
+    transform: none;
+    }
     .pc, .about-pharagrapher {
         display: none;
     }
